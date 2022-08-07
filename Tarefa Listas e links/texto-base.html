@@ -1,0 +1,147 @@
+SISTEMAS OPERACIONAIS
+
+SUMÁRIO
+
+1. Definição e histórico
+2. Funções do Sistema Operacional
+2.1. Gerenciamento de processos
+2.2. Gerenciamento de memória
+2.3. Sistema de arquivos
+2.3.1. GUI (Graphical User Interface)
+2.3.2. CUI (Command-Line User Interface)
+3. Classificação dos sistemas operacionais
+3.1. Em relação ao seu projeto (arquitetura)
+3.2. Em relação ao gerenciamento de processos
+3.3. Quanto a quantidade de usuários que podem utilizar o sistema simultaneamente
+4. Relação de sistemas operacionais
+4.1. Sistema operacional Ubuntu
+
+
+1. Definição e histórico
+
+Sistema operacional é um programa ou um conjunto de programas cuja função é gerenciar os recursos do sistema: definir qual o programa recebe atenção do processador, gerenciar memória, criar um sistema de arquivos, etc., além de fornecer uma interface entre o computador e o usuário. É o primeiro programa que a máquina executa no momento em que é ligada (em um processo chamado de bootstrapping) e, a partir de então, não deixa de funcionar até que o computador seja desligado. O sistema operacional reveza sua execução com a de outros programas, como se estivesse vigiando, controlando e orquestrando todo o processo computacional.
+
+No início da computação, os primeiros sistemas operacionais eram únicos, pois cada mainframe vendido necessitava de um sistema operacional específico. Esse problema era resultado de arquiteturas diferentes e da linguagem de máquina utilizada. Após essa fase, iniciou-se a pesquisa de sistemas operacionais que automatizassem a troca de tarefas (jobs), já que os primeiros sistemas eram monousuários e tinham cartões perfurados como entrada. Eliminava-se, assim, o trabalho de pessoas que eram contratadas apenas para trocar os cartões perfurados.
+
+Um dos primeiros sistemas operacionais de propósito geral foi o CTSS, desenvolvido no Massachusetts Institute of Technology (MIT) em seguida, o próprio MIT, os laboratórios Bell da AT&T e a General Electric desenvolveram o Multics cujo objetivo era suportar centenas de usuários. Apesar do fracasso comercial, o Multics serviu como base para estudo e desenvolvimento de outros sistemas operacionais. Ken Thompson, um dos desenvolvedores do Multics escreveu, na Bell, uma nova concepção do Multics, criando o Unics (1969), mais tarde denominado Unix.
+
+Os sistemas operacionais, incluindo o de Unix, eram geralmente programados em Assembler. À época, Dennis Ritchie, também da Bell, criou a linguagem C, a partir da linguagem B, desenvolvida por Thompson. Na sequência, Thompson e Ritchie reescreveram o Unix em C. A partir daí surgiram variantes do Unix: System V e derivados (HP-UX, AIX); família BSD (FreeBSD, NetBSD, OpenBSD, etc.), Linux, e até o Mac OS X, que deriva do Mach e FreeBSD.
+
+Na década de 1970, com o aparecimento dos computadores pessoais, houve necessidade de um sistema operacional de utilização mais fácil. Em 1980, William (Bill) Gates e seu colega de faculdade Paul Allen, fundadores da Microsoft, compraram o sistema QDOS (Quick and Dirty Operating System) de Tim Paterson por $50.000, batizaram-no de DOS (Disk Operating System) e venderam licenças à IBM. O DOS vendeu muitas cópias, como sistema operacional padrão para os computadores pessoais desenvolvidos pela IBM. IBM e Microsoft fariam, ainda, uma parceria para o desenvolvimento de um sistema operacional multitarefa chamado OS/2. Após o fim da breve parceria, a IBM seguiu sozinha no desenvolvimento do OS/2.
+
+No começo da década de 1990, um estudante de computação finlandês postou um comentário, em uma lista de discussão da Usenet, dizendo que estava desenvolvendo um núcleo de sistema operacional, lançando convite à parcerias. Esse estudante chamava-se Linus Torvalds. Ali estavam sendo dados os primeiros passos para o tão conhecido Linux.
+
+2. Funções do Sistema Operacional
+
+O sistema operacional pode ser visto como um programa de grande complexidade, responsável por todo o funcionamento de uma máquina, desde o software até o hardware instalado. Todos os processos de um contador estão por trás dessa programação complexa que comanda todas as funções que se impõem à máquina. Modernamente, destacam-se os sistemas operacionais principalmente pelo seu uso corrente em computadores domésticos: Windows, Linux e Mac OS X.
+
+Um sistema operacional possui as seguintes funções:
+
+Gerenciamento de processos;
+Gerenciamento de memória;
+Sistema de arquivos; e
+Entrada e saída de dados.
+
+2.1. Gerenciamento de processos
+
+Um sistema operacional multitarefa é preparado para dar ao usuário a ilusão de que o número de processos em execução simultânea no computador é maior do que o número de processadores instalados. Cada processo recebe uma fatia do tempo, e a alternância entre vários processos é tão rápida, que o usuário pensar aqui sua execução é simultânea. São utilizados algoritmos para determinar qual o processo será executado em determinado momento e por quanto tempo. Denomina-se IPC (Inter-Process Communication) a comunicação entre os diversos processos. Os mecanismos que facultam esse IPC são:
+
+Sinais;
+Pipes;
+Named pipes;
+Memória compartilhada;
+Soquetes (sockets);
+Troca de mensagens.
+
+O sistema operacional normalmente deve possibilitar o multiprocessamento (SMP ou Em umA). Nesse caso, processos distintos e threads podem ser executados em diferentes processadores. Para isso, ele deve ser reentrante e passível de interrupção durante a execução de uma tarefa.
+
+2.2. Gerenciamento de memória
+
+O sistema operacional tem acesso completo a memória do sistema deve permitir que os processos dos usuários tenham acesso seguro à memória quando o requisitam. Vários sistemas operacionais usam memória virtual, que possui três funções básicas:
+
+Assegurar que cada processo tenha seu próprio espaço de endereçamento, começando em zero, para evitar ou resolver o problema de realocação;
+Prover proteção da memória para impedir que um processo utilize um endereço de memória que não lhe pertencia;
+Possibilitar que uma aplicação utilize mais memória do que a fisicamente existente.
+
+2.3. Sistema de arquivos
+
+A memória principal do computador é volátil e seu tamanho é limitado pelo custo do hardware. Assim, os usuários necessitam de algum método para armazenar e recuperar informações de modo permanente.
+Um arquivo é um conjunto de bytes, normalmente armazenado em um dispositivo periférico não volátil como, por exemplo, um disco, que pode ser lido e gravado por um ou mais processos. Os sistemas operacionais fornecem abstração de hardware para que seus recursos possam ser usados de maneira correta e padronizada, mas, para ser possível operar um computador, é necessário fornecer também uma interface, para que o usuário possa desfrutar dos recursos do sistema.
+
+Atualmente, existem dois tipos de interface: a GUI (Graphical User Interface), conhecida também por interface gráfica, e a CUI (Command-Line Interface), interface de linha de comando.
+
+2.3.1. GUI (Graphical User Interface)
+
+Nesse tipo de interface, o usuário tem a disposição um ambiente de trabalho composto por menus, ícones, janelas e outros itens disponíveis. Usuário interage com esse tipo de interface usando o mouse, podendo também utilizar o teclado e teclas de atalho. É possível fazer todo tipo de tarefa usando interface gráfica, como edição de vídeos e imagens, sendo que somente alguns tipos muito específicos de tarefas se saem melhor em linha de comando. Acrescentar facilidade de uso e agilidade é o objetivo da GUI, tendo a desvantagem de consumir muito mais memória que interfaces de linha de comando. Em sistemas unix-likes, existe a possibilidade de escolher o gerenciamento de janelas e utilizar, aumentando muito a liberdade de escolha do ambiente.
+
+2.3.2. CUI (Command-Line User Interface)
+
+Além da interface gráfica, existe a interface de linha de comando, que funciona basicamente com a digitação de comandos, sendo, nesse aspecto, relativamente pouco interativa. Os comandos digitados são interpretados por interpretador de comandos, conhecidos também por shells, bastante comuns em sistemas e unix-likes. Um exemplo de interpretador de comando seria o Bash. Utilizado geralmente por usuários avançados e em atividades específicas, como gerenciamento remoto, entrega poucos recursos de hardware em comparação a interface gráfica. Nesse tipo de ambiente, o mouse raramente é utilizado, embora seja possível através do uso da biblioteca ncurses no desenvolvimento dos softwares.
+
+3. Classificação dos sistemas operacionais
+
+3.1. Em relação ao seu projeto (arquitetura)
+Núcleo monolítico ou monobloco: o núcleo consiste em um único processo, executando em uma memória protegida (espaço de núcleo) as principais funções. Ex.: MAC OS 2, OS/2, Windows, Linux, FreeBSD.
+Micronúcleo ou modelo cliente-servidor: o núcleo consiste de funções mínimas (comunicação e gerenciamento de processos) e outras funções, como sistemas de arquivos e gerenciamento de memória. São executadas no espaço do usuário como serviços: as aplicações (programas) são os clientes. Exemplos: GNU Hurd, Mach.
+Sistema em camadas: funções do núcleo irão executar em camadas distintas.
+
+Monitor de máquinas virtuais: fornece uma abstração do hardware para vários sistemas operacionais. Exemplos: VM/370, VMware, Xen.
+
+3.2. Em relação ao gerenciamento de processos
+
+Monotarefa (Monoprogramação): pode-se executar apenas um processo de cada vez. Exemplo: MS-DOS.
+Multitarefa (Multiprogramação): além do próprio sistema operacional, vários processos de utilizador (tarefas) estão carregados em memória, sendo que um pode estar ocupando o processador e outros ficam enfileirados, aguardando a sua vez. O compartilhamento de tempo no processador é distribuído de modo que o usuário tenha a impressão que diversos processos estão sendo executados simultaneamente. Exemplos: OS/2, Windows, Linux, FreeBSD e o Mac OS X.
+
+Multiprogramação: O sistema operacional divide o tempo de processamento entre vários processos, mantendo o processador sempre ocupado.
+
+Multiprocessamento: O sistema operacional distribui as tarefas entre dois ou mais processadores.
+
+3.3. Quanto a quantidade de usuários que podem utilizar o sistema simultaneamente
+
+Monousuário: apenas um usuário por vez (apesar de poder suportar recursos como troca de usuário). Exemplo: Windows. Esse também pode ser acessado por terminais e conexão remota.
+Multiusuário: vários usuários utilizam o computador ao mesmo tempo, seja por diversos terminais, seja por conexão remota, como o SSH. Exemplos: Linux, Unix.
+
+4. Relação de sistemas operacionais
+
+A seguir, uma lista de sistemas operacionais ativos:
+
+Linux
+Mac OS X
+Windows XP
+Solaris
+FreeBSD
+Haiku
+eComStation
+FreeDOS
+Unix
+System V
+MINIX
+OpenBSD
+NetBSD
+DragonflyBSD
+MenuetOS
+Google Chrome OS
+Windows 7
+Windows Vista
+Windows 8
+Windows 10
+Ubuntu
+
+Importante sistemas operacionais descontinuadas:
+
+MS-DOS
+OS/2
+BeOS
+NeXTStep
+CP/M
+Windows 2000
+Windows 98
+
+4.1. Sistema operacional Ubuntu
+
+Ubuntu é um sistema operacional de código aberto, construído a partir do núcleo do Linux, baseado no Debian. Diferencia-se dele por ter versões lançadas semestralmente, disponibilizar suporte técnico nos nove meses seguintes ao lançamento de cada versão e pela filosofia de sua concepção.
+Pretende ser um sistema que qualquer pessoa possa utilizar sem dificuldades, independentemente da nacionalidade, nível de conhecimento ou limitações físicas, constituído principalmente por Software Livre isento de qualquer taxa. Os usuários são “ubuntistas“ ou “ubunteros“.
+
+O nome “Ubuntu” deriva do conceito sul-africano de mesmo nome, diretamente traduzido como “humanidade com os outros”. O nome está, portanto, associado à ideologia do projeto, baseada na liberdade do Software e no trabalho comunitário de desenvolvimento.
+
+O sistema é comumente chamado “Ubuntu Linux“, porém, oficialmente, a Canonical, sua desenvolvedora, usa apenas o nome “Ubuntu“ uma vez que o sistema, ao ser portado para outros núcleos livres que não o Linux, recebe outros nomes (por exemplo, o Ubuntu Implementado sobre o OpenSolaris recebe o nome de “Nexenta”, ao contrário do Debian, por exemplo, que recebe esse nome independentemente do núcleo usado.

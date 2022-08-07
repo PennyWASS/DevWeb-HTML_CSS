@@ -1,0 +1,17 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+     /*esses outros nomes são precaussões para
+    caso o principal não funcione (são diferentes tipos de fontes)*/
+    text-align: justify;
+    margin: 20px; /*A margem do texto */
+    background-color: rgb(209, 199, 245);
+}
+h1,h2,h3,h4{ /*Mudando os estilos de todos os títulos de uma vez*/
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    background-color: antiquewhite;
+    padding: 5px;/*ESPASSAMENTO DE CADA TÍTULO*/
+}
+p{
+    background-color: white;
+}
